@@ -5,6 +5,10 @@ body {
   color: #333;
 }
 
+main {
+  background-color: bisque;
+}
+
 header {
   background-color: salmon;
   color: #fff;
