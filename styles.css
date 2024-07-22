@@ -1,0 +1,170 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+header {
+  background-color: salmon;
+  color: #fff;
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  margin-left: 1em;
+  font-size: 1.5em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 1em;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  /* background-color: salmon; */
+  color: #966ee0;
+}
+
+.intro-section {
+  text-align: center;
+  padding: 2em 1em;
+}
+
+.intro-section p {
+  padding: 1em;
+}
+
+.destination-button {
+  background-color: salmon;
+  color: white;
+  padding: 0.75em 0.5em;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.destination-button:hover {
+  background-color: #966ee0;
+  color: black;
+}
+
+.about-section,
+.destinations-section,
+.contact-section {
+  padding: 2em 1em;
+}
+
+.destination-galleries {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.gallery-container {
+  background-color: #f9f9f9;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 250px;
+}
+
+.gallery-container h3 {
+  margin-top: 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-auto-rows: 1fr; */
+  gap: 1rem;
+  margin: 1.5rem;
+  align-items: end;
+}
+
+.gallery img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 5%;
+}
+
+.first-gallery-item {
+  grid-column: span 2;
+}
+
+/* .gallery img:nth-of-type(3) {
+  grid-column: 3/3;
+  grid-row: 5;
+}  */
+
+.contact-section form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section label {
+  margin-top: 1em;
+  text-align: left;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-section button {
+  margin-top: 1em;
+  padding: 0.75em;
+  border: none;
+  border-radius: 5px;
+  background-color: salmon;
+  color: white;
+  cursor: pointer;
+}
+
+.contact-section button:hover {
+  background-color: #966ee0;
+  color: black;
+}
+
+footer {
+  background-color: salmon;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  position: absolute;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    .first-gallery-item {
+      grid-column: span 1;
+    }
+    /* grid-auto-rows: 2fr 1fr 1fr; */
+  }
+}
