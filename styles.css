@@ -1,47 +1,64 @@
+/* General Seting */
+:root {
+  --primary: salmon;
+  --secondary: #966ee0;
+  --background: #F5F5DC;
+  --white-bg: white;
+
+
+
+  --padding-container: 2rem
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: all;
+  transition-duration: 0.2s;
+}
+
 /* General Styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  color: #333;
 }
 
 main {
-  background-color: beige;
+  background-color: var(--background);
+  padding: 1rem var(--padding-container);
 }
 
 header {
-  background-color: salmon;
-  color: #fff;
-  padding: 1em 0;
+  background-color: var(--primary);
+  color: var(--white-bg);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem var(--padding-container);
 }
 
 header .logo {
-  margin-left: 1em;
   font-size: 1.5em;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  margin: 0;
+  gap: 1rem;
   padding: 0;
 }
 
-nav ul li {
-  margin: 0 1em;
-}
 
 nav ul li a {
-  color: #fff;
+  color: var(--white-bg);
   text-decoration: none;
 }
 
 nav ul li a:hover {
-  /* background-color: salmon; */
-  color: #966ee0;
+  /* background-color: var(--primary); */
+  color: var(--secondary);
 }
 
 .intro-section {
@@ -54,16 +71,17 @@ nav ul li a:hover {
 }
 
 .destination-button {
-  background-color: salmon;
+  background-color: var(--primary);
   color: white;
   padding: 0.75em 0.5em;
   text-decoration: none;
   border-radius: 5px;
+  text-wrap: nowrap;
 }
 
 .destination-button:hover {
-  background-color: #966ee0;
-  color: black;
+  background-color: var(--secondary);
+  color: var(--white-bg);
 }
 
 .about-section,
@@ -144,19 +162,19 @@ nav ul li a:hover {
   padding: 0.75em;
   border: none;
   border-radius: 5px;
-  background-color: salmon;
+  background-color: var(--primary);
   color: white;
   cursor: pointer;
 }
 
 .contact-section button:hover {
-  background-color: #966ee0;
+  background-color: var(--secondary);
   color: black;
 }
 
 footer {
-  background-color: salmon;
-  color: #fff;
+  background-color: var(--primary);
+  color: var(--white-bg);
   text-align: center;
   padding: 1em 0;
   position: absolute;
@@ -166,9 +184,11 @@ footer {
 @media (max-width: 600px) {
   .gallery {
     grid-template-columns: 1fr;
+
     .first-gallery-item {
       grid-column: span 1;
     }
+
     /* grid-auto-rows: 2fr 1fr 1fr; */
   }
 }
